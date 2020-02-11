@@ -8,5 +8,11 @@
 }
 .drop-list {
   max-height: 380px;
+  width: 600px;
+  max-width: 90%;
   overflow: auto;
+}
+
+agm-map {
+  height: 300px;
 }

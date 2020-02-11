@@ -26,6 +26,12 @@ export class AuthInterceptor implements HttpInterceptor {
     //     this.progressbarService.display(true);
     // }
 
+    if (!!token && req.url.includes('http')) {
+      const authHeader = new HttpHeaders();
+      const authReq = req.clone({ headers: authHeader, url: req.urlWithParams });
+      return next.handle(authReq);
+    }
+
     if (!!token && !req.url.includes('api/login')) {
       const mainUrl = environment.API.URL + req.urlWithParams;
       const authHeader = new HttpHeaders();

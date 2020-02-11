@@ -1,15 +1,19 @@
 <div class="content-box p-3 mb-4 shadow-sm">
   <div class="row">
-    <div class="col-md-12 col-lg-6">
-      <div ngbDropdown class="d-inline-block">
+    <div class="col-md-12 col-lg-6 mb-3">
+      <div ngbDropdown class="d-block">
         <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select City</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="drop-list">
-          <button ngbDropdownItem *ngFor="let city of cityList">{{city.City}}</button>
+          <button ngbDropdownItem *ngFor="let city of cityList" (click)="getLatLong(city)">{{city.City}}, {{city.District}},
+            {{city.State}}</button>
         </div>
       </div>
     </div>
     <div class="col-md-12 col-lg-6">
-      map comming soon..!!
+      <div #mapContainer id="map"></div>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
     </div>
   </div>
 </div>

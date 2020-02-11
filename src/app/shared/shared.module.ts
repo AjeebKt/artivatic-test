@@ -65,7 +65,8 @@ const directives = [PhoneNumberDirective,
 @NgModule({
   imports: [
     CommonModule,
-    ...MAT_MODULES
+    ...MAT_MODULES,
+
   ],
   exports: [
     CommonModule,

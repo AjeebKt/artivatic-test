@@ -19,6 +19,7 @@ import { AppComponent } from './app.component';
 import { AuthInterceptor } from './core/services/auth.interceptor';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,10 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     CoreModule,
     ReactiveFormsModule, FormsModule,
-
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA2nJjGEfc6v-8Xwov_cx82CL2EvB0Bl3M',
+      libraries: ['places']
+    })
   ],
   providers: [
     GlobalDataService,
