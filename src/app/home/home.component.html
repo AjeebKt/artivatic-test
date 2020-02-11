@@ -1,4 +1,15 @@
 <div class="content-box p-3 mb-4 shadow-sm">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti autem non porro sit explicabo. Tenetur magni omnis
-  quae veniam quo. Eos doloremque minima cum dignissimos blanditiis alias. Facilis, porro consectetur?
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Select City</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="drop-list">
+          <button ngbDropdownItem *ngFor="let city of cityList">{{city.City}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6">
+      map comming soon..!!
+    </div>
+  </div>
 </div>

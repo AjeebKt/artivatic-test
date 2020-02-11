@@ -6,3 +6,7 @@
 .content-box {
   background-color: $white;
 }
+.drop-list {
+  max-height: 380px;
+  overflow: auto;
+}

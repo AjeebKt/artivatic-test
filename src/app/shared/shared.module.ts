@@ -24,6 +24,7 @@ import { ButtonSubmitDirective } from './directives/button-submit.directive';
 import { FloatNumberDirective } from './directives/float-number.directive';
 import { DateInputDisableDirective } from './directives/date-input-disable.directive';
 import { FocusOnErrorDirective } from './directives/focus-on-error.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const MAT_MODULES = [
   MatRadioModule,
@@ -46,8 +47,8 @@ const MAT_MODULES = [
   MatTooltipModule,
   FormsModule,
   ReactiveFormsModule,
-  NgxPaginationModule
-
+  NgxPaginationModule,
+  NgbModule
 ];
 const pipes = [FilterPipe];
 const components = [ShowErrorsComponent, CustomPaginationComponent,
