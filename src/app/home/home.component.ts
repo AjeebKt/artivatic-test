@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   getLatLong(data) {
     this.hs.getLatLong(data).subscribe(res => {
       console.log(res);
-      if(res.results.lenght) {
+      if (res.results.length) {
         this.latitude = res.results[0].geometry.location.lat;
         this.longitude = res.results[0].geometry.location.lng;
       } else {

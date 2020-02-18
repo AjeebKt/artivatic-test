@@ -16,6 +16,6 @@ export class HomeService {
   }
   getLatLong(qry): Observable<any> {
     // tslint:disable-next-line: max-line-length
-    return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${qry.City}+${qry.District}+${qry.State}&key=AIzaSyA2nJjGEfc6v-8Xwov_cx82CL2EvB0Bl3M`);
+    return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${qry.City}+${qry.District}+${qry.State}&key=AIzaSyDi3wWSEFdcd3NQ1zgY7k_5RjjYpDmgAnk`);
   }
 }
