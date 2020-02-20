@@ -13,6 +13,13 @@
   overflow: auto;
 }
 
+.drop-list-state {
+  max-height: 380px;
+  width: 400px;
+  max-width: 90%;
+  overflow: auto;
+}
+
 agm-map {
   height: 300px;
 }
